@@ -1,0 +1,21 @@
+﻿There project template is contained in a zip file.
+The fzip is in the Project Templates subfolder.
+The Rezip-Extension.bat batch script is used to update it.
+This script is automatically triggered on every build
+via a Pre-Build script.
+
+To stop this:
+1) Right-click the project, select Properties
+2) Click the Build Events tab
+3) Change this line
+@set rebuildzip=1
+   to
+@set rebuildzip=
+
+That will stop the batch file from being called, but
+you must remember to invoke it manually to update the
+zip with any changes.
+
+Restore the line to
+@set rebuildzip=1
+to resume rebuilding the zip on every build.

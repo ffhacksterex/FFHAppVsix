@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFHacksterExtensionTemplate", "FFHacksterExtensionTemplate\FFHacksterExtensionTemplate.csproj", "{FE3A3CDD-3263-4D6C-B686-69687FCD879B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFHExWizard", "FFHExWizard\FFHExWizard.csproj", "{915B7264-B39D-416A-8C04-8B012D43DAF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3A3CDD-3263-4D6C-B686-69687FCD879B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3A3CDD-3263-4D6C-B686-69687FCD879B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3A3CDD-3263-4D6C-B686-69687FCD879B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3A3CDD-3263-4D6C-B686-69687FCD879B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915B7264-B39D-416A-8C04-8B012D43DAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915B7264-B39D-416A-8C04-8B012D43DAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915B7264-B39D-416A-8C04-8B012D43DAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915B7264-B39D-416A-8C04-8B012D43DAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0A2CA0D-F334-4883-A6B8-C781217FB3CA}
+	EndGlobalSection
+EndGlobal

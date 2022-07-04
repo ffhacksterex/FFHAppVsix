@@ -1,0 +1,59 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>FFHacksterEx Extension</Name>
+    <Description>
+Create a DLL that implements an extension to FFHacksterEx.
+Compatible starting with version 0.9.7.0.
+If creating this project within the FFHExtensions solution, then place it in the \dlls subfolder beside the other extensions.
+    </Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>ffhext-extension</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <LanguageTag>cpp</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <ProjectTypeTag>desktop</ProjectTypeTag>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ff1ext-golditems.vcxproj" File="ff1ext-golditems.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">ff1ext-golditems.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.user">ff1ext-golditems.vcxproj.user</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CustomEnemy.cpp">CustomEnemy.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.cpp">ff1ext-golditems.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CustomModule.cpp">CustomModule.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SampleEditor.cpp">SampleEditor.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="stdafx.cpp">stdafx.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.def">ff1ext-golditems.def</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CustomEnemy.h">CustomEnemy.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.h">ff1ext-golditems.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CustomModule.h">CustomModule.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$-resource.h">ff1ext-golditems-resource.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SampleEditor.h">SampleEditor.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="stdafx.h">stdafx.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="targetver.h">targetver.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="version-number.h">version-number.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.rc">ff1ext-golditems.rc</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.rc2">res\ff1extgolditems.rc2</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ff-content.targets">ff-content.targets</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ff-packaging.targets">ff-packaging.targets</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PostBuild.targets">PostBuild.targets</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="readme-$projectname$.txt">readme-ff1ext-golditems.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ffhex-ext.props">ffhex-ext.props</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="README.md">README.md</ProjectItem>
+    </Project>
+    <CustomParameters>
+        <CustomParameter Name="$projectversion$" Value="0,9,7,0"/>
+    </CustomParameters>    
+  </TemplateContent>
+  <WizardExtension>
+      <Assembly>FFHExWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=80eb2134940ea6be</Assembly>
+      <FullClassName>FFHExWizard.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
