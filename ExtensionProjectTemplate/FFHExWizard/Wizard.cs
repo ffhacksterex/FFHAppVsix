@@ -39,9 +39,12 @@ namespace FFHExWizard
 
         // PRIVATE
 
+        //TODO - in a future version, implement range checks with $minprojectversion$
+        //private static readonly string MinProjectVersionKey = "$minprojectversion$";
+
         private static readonly string SafeProjectNameKey = "$safeprojectname$";
         private static readonly string ProjectVersionKey = "$projectversion$";
-        private static readonly string DefaultProjectVersion = "0,9,7,0";
+        private static readonly string FallbackProjectVersion = "0.9.7.0";
 
         private static void OpenFolder(string path)
         {
@@ -66,18 +69,29 @@ namespace FFHExWizard
 
         private void HandleRunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
-            // $safeprojectversion$ is built in, but $projectversion$ is template-provided.
-            // If the project template omitted it, then use a default to avoid an exception.
+            // If nothing is supplied, default to the package version,
+            // which (for now) is kept in sync with the target.
             if (!replacementsDictionary.ContainsKey(ProjectVersionKey))
             {
-                MessageBox.Show($"'{ProjectVersionKey}' was not defined in the project template.\n" +
-                    $"Project version will default to '{DefaultProjectVersion}'.");
-                replacementsDictionary[ProjectVersionKey] = DefaultProjectVersion;
+                string defVersion = FallbackProjectVersion;
+                try
+                {
+                    defVersion = typeof(Wizard).Assembly.GetName().Version.ToString();
+                }
+                catch (Exception ex)
+                {
+                    Trace.WriteLine("Unable to read the assembly version.");
+                    Trace.WriteLine(ex);
+                    MessageBox.Show($"Project Version found in neither the template '{ProjectVersionKey}' key nor this assembly's version info.\n" +
+                        $"Project version will default to '{defVersion}'.");
+                }
+                replacementsDictionary[ProjectVersionKey] = defVersion;
             }
 
+            //TODO - in a future version, implement range checks with $minprojectversion$
+
             // Dashes aren't safe in C++ variable names/identifiers, change to underscores.
-            var safeprj = replacementsDictionary[SafeProjectNameKey]
-                .Replace('-', '_');
+            var safeprj = replacementsDictionary[SafeProjectNameKey].Replace('-', '_');
 
             // Set the defaults, then invoke the user input with those defaults.
             var prjver = replacementsDictionary[ProjectVersionKey];
@@ -103,9 +117,10 @@ namespace FFHExWizard
                         throw new OperationCanceledException("Project creation cancelled.");
                     }
                 }
+                // *sigh* VC++ uses commas in its version info files instead of dots.
                 replacementsDictionary["$projectsymbol$"] = projsym;
                 replacementsDictionary["$inigroupname$"] = inigrp;
-                replacementsDictionary["$projectversion$"] = prjver;
+                replacementsDictionary["$projectversion$"] = prjver.Replace('.', ',');
             }
             catch (OperationCanceledException ex) when (HandleCancellation(ex)) { }
             catch (Exception ex) when (ex.GetType() != typeof(OperationCanceledException))
