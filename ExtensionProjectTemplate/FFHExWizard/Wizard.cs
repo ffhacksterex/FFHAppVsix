@@ -44,7 +44,7 @@ namespace FFHExWizard
 
         private static readonly string SafeProjectNameKey = "$safeprojectname$";
         private static readonly string ProjectVersionKey = "$projectversion$";
-        private static readonly string FallbackProjectVersion = "0.9.7.0";
+        private static readonly string FallbackProjectVersion = "0.9.8.0";
 
         private static void OpenFolder(string path)
         {

@@ -20,6 +20,10 @@ CSampleEditor::~CSampleEditor()
 {
 }
 
+void CSampleEditor::LoadOffsets()
+{
+}
+
 void CSampleEditor::LoadRom()
 {
 }
@@ -47,6 +51,9 @@ BOOL CSampleEditor::OnInitDialog()
 {
 	CEditorWithBackground::OnInitDialog();
 	m_banner.Set(this, COLOR_BLACK, COLOR_ORANGE, "Sample Editor");
+
+	this->LoadOffsets();
+	this->LoadRom();
 	return FALSE;
 }
 

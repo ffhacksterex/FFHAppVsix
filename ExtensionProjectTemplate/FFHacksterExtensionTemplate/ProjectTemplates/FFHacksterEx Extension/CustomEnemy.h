@@ -6,14 +6,17 @@ class CCustomEnemy : public CEnemy
 public:
 	CCustomEnemy(CWnd* parent = nullptr);
 
+// Public MFC overrides 
+	virtual INT_PTR DoModal();
+
 protected:
+// Dialog Data
+	CClearButton m_testbtn;
+
+// MFC overrides and message handlers
 	virtual void DoDataExchange(CDataExchange* pDX);
 	virtual BOOL OnInitDialog();
 
-	CClearButton m_testbtn;
-
 	DECLARE_MESSAGE_MAP()
 	afx_msg void OnTestButton();
-public:
-	virtual INT_PTR DoModal();
 };
