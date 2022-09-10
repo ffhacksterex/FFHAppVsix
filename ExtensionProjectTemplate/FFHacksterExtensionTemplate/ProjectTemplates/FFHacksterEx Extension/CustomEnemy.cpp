@@ -13,17 +13,17 @@ BEGIN_MESSAGE_MAP(CCustomEnemy, CEnemy)
 	ON_BN_CLICKED(IDC_TESTBUTTON, OnTestButton)
 END_MESSAGE_MAP()
 
-void CCustomEnemy::DoDataExchange(CDataExchange* pDX)
-{
-	CEnemy::DoDataExchange(pDX);
-	DDX_Control(pDX, IDC_TESTBUTTON, m_testbtn);
-}
-
 INT_PTR CCustomEnemy::DoModal()
 {
 	// Always use mappings for this modal; allows finding controls by name (see OnInitDialog)
 	PreloadControlMappings = true;
 	return CEnemy::DoModal();
+}
+
+void CCustomEnemy::DoDataExchange(CDataExchange* pDX)
+{
+	CEnemy::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_TESTBUTTON, m_testbtn);
 }
 
 BOOL CCustomEnemy::OnInitDialog()

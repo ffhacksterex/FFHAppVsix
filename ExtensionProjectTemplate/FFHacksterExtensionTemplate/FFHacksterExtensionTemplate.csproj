@@ -54,10 +54,34 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Notes.txt" />
-    <Content Include="ProjectTemplates\FFHacksterEx Extension.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\CustomEnemy.cpp" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\CustomEnemy.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\CustomModule.cpp" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\CustomModule.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems-resource.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.cpp" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.def" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.rc" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.vcxproj.filters" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.vcxproj.user" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\MyTemplate.vstemplate" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\MyTemplate.vstemplate.xml" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\readme-ff1ext-golditems.txt" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\res\ff1extgolditems.rc2" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\SampleEditor.cpp" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\SampleEditor.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\stdafx.cpp" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\stdafx.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\targetver.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\version-number.h" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension\__TemplateIcon.png" />
+    <None Include="ProjectTemplates\FFHacksterEx Extension\ff-content.targets" />
+    <None Include="ProjectTemplates\FFHacksterEx Extension\ff-packaging.targets" />
+    <None Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.vcxproj" />
+    <None Include="ProjectTemplates\FFHacksterEx Extension\ffhex-ext.props" />
+    <None Include="ProjectTemplates\FFHacksterEx Extension\PostBuild.targets" />
+    <None Include="ProjectTemplates\FFHacksterEx Extension\README.md" />
     <None Include="ProjectTemplates\Rezip-Extension.bat" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
