@@ -76,6 +76,10 @@
     <Content Include="ProjectTemplates\FFHacksterEx Extension\targetver.h" />
     <Content Include="ProjectTemplates\FFHacksterEx Extension\version-number.h" />
     <Content Include="ProjectTemplates\FFHacksterEx Extension\__TemplateIcon.png" />
+    <Content Include="ProjectTemplates\FFHacksterEx Extension.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\FFHacksterEx Extension\ff-content.targets" />
     <None Include="ProjectTemplates\FFHacksterEx Extension\ff-packaging.targets" />
     <None Include="ProjectTemplates\FFHacksterEx Extension\ff1ext-golditems.vcxproj" />
