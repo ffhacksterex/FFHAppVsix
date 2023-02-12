@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="FFHacksterExtensionTemplate.8d432208-c77a-4dbf-9524-25c0f85f99ce" Version="0.9.8.0" Language="en-US" Publisher="Esselle Jaye" />
+        <Identity Id="FFHacksterExtensionTemplate.8d432208-c77a-4dbf-9524-25c0f85f99ce" Version="0.9.8.1" Language="en-US" Publisher="Esselle Jaye" />
         <DisplayName>FFHacksterEx Project Extension Template</DisplayName>
-        <Description xml:space="preserve">Creates a DLL project that works as an extension for FFHacksterEx, compatible with versions 0.9.8.0</Description>
+        <Description xml:space="preserve">Creates a DLL project that works as an extension for FFHacksterEx, compatible with versions 0.9.8.1</Description>
         <MoreInfo>https://digitaldreamers.org/ffhacksterex/extensions</MoreInfo>
         <Icon>FFHacksterExtensionIcon.png</Icon>
         <Tags>FFHacksterEx FFHEx FinalFantasy FF1</Tags>
