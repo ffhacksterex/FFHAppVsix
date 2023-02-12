@@ -3,7 +3,7 @@
     <Name>FFHacksterEx Extension</Name>
     <Description>
 Create a DLL that implements an extension to FFHacksterEx.
-Compatible with versions 0.9.8.0.
+Compatible with versions 0.9.8.1.
 If creating this project within the FFHExtensions solution, then place it in the \dlls subfolder beside the other extensions.
     </Description>
     <ProjectType>VC</ProjectType>
@@ -49,11 +49,11 @@ If creating this project within the FFHExtensions solution, then place it in the
       <ProjectItem ReplaceParameters="true" TargetFileName="README.md">README.md</ProjectItem>
     </Project>
     <CustomParameters>
-        <CustomParameter Name="$minprojectversion$" Value="0.9.8.0"/>
+        <CustomParameter Name="$minprojectversion$" Value="0.9.8.1"/>
     </CustomParameters>    
   </TemplateContent>
   <WizardExtension>
-      <Assembly>FFHExWizard, Version=0.9.8.0, Culture=Neutral, PublicKeyToken=80eb2134940ea6be</Assembly>
+      <Assembly>FFHExWizard, Version=0.9.8.1, Culture=Neutral, PublicKeyToken=80eb2134940ea6be</Assembly>
       <FullClassName>FFHExWizard.Wizard</FullClassName>
   </WizardExtension>
 </VSTemplate>
